@@ -57,7 +57,7 @@ void setup()
   Serial.begin(19200); //Configura velocidad del puerto serie del Arduino
   Serial.println("OK");
   delay (1000);
-  SIM900.println("AT + CPIN = \"3525\""); //Comando AT para introducir el PIN de la tarjeta
+  SIM900.println("AT + CPIN = \"3525\""); //Comando AT para introducir el PIN de la tarjeta. Cambiar por el vuestro.
   delay(25000); //Tiempo para que encuentre una RED
   Serial.println("PIN OK");
   SIM900.print("AT+CLIP=1\r"); // Activamos la identificación de llamadas
@@ -92,7 +92,7 @@ if (incoming_char == '?')
   Serial.println("Enviando SMS...");
   SIM900.print("AT+CMGF=1\r"); //Comando AT para mandar un SMS
   delay(1000);
-  SIM900.println("AT + CMGS = \"666666999\""); //Numero al que vamos a enviar el mensaje
+  SIM900.println("AT + CMGS = \"*********\""); //Numero al que vamos a enviar el mensaje. Cambiar asteriscos por nº correcto.
   delay(1000);
   SIM900.println("INFO METEO V. LAFARGA" );// Texto del SMS
   delay(100);
