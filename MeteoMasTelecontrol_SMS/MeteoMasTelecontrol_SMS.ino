@@ -114,7 +114,7 @@ if (incoming_char != '?' &&  'L' && 'H')
   Serial.println("Enviando SMS...");
   SIM900.print("AT+CMGF=1\r"); //Comando AT para mandar un SMS
   delay(1000);
-  SIM900.println("AT + CMGS = \"666666999\""); //Numero al que vamos a enviar el mensaje
+  SIM900.println("AT + CMGS = \"*********\""); //Numero al que vamos a enviar el mensaje. Cambiar asteriscos po nº correcto.
   delay(1000);
   SIM900.println("INFO METEO V. LAFARGA" );// Texto del SMS
   delay(100);
@@ -170,7 +170,7 @@ void mensaje_smsON()
   Serial.println("Enviando SMS...");
   SIM900.print("AT+CMGF=1\r"); //Comando AT para mandar un SMS
   delay(1000);
-  SIM900.println("AT + CMGS = \"654614880\""); //Numero al que vamos a enviar el mensaje
+  SIM900.println("AT + CMGS = \"*********\""); //Numero al que vamos a enviar el mensaje. Cambiar asteriscos po nº correcto.
   delay(1000);
   SIM900.println("SISTEMA CONECTADO");// Texto del SMS
   delay(100);
@@ -187,7 +187,7 @@ void mensaje_smsOFF()
   Serial.println("Enviando SMS...");
   SIM900.print("AT+CMGF=1\r"); //Comando AT para mandar un SMS
   delay(1000);
-  SIM900.println("AT + CMGS = \"654614880\""); //Numero al que vamos a enviar el mensaje
+  SIM900.println("AT + CMGS = \"*********\""); //Numero al que vamos a enviar el mensaje. Cambiar asteriscos po nº correcto.
   delay(1000);
   SIM900.println("SISTEMA DESCONECTADO");// Texto del SMS
   delay(100);
